@@ -3,16 +3,14 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="x-ua-compatible" content="ie=edge">
-        <title></title>
-        <meta name="description" content="">
+        <title>Free Code Camp Survey Form</title>
+        <meta name="description" content="Web Design Project. Survey Form for Free Code Camp">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        
-        <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
-        <link rel="apple-touch-icon" href="apple-touch-icon.png">
-
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/4.2.0/normalize.min.css">
+        <link rel="stylesheet" href="main.css">
+        <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
         <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
-        <!--<link rel="stylesheet" href="css/main.css"> -->
+        <script src="https://gitcdn.link/repo/freeCodeCamp/testable-projects-fcc/master/build/bundle.js"></script>
     </head>
     <body>
         <!--[if lt IE 8]>
@@ -20,8 +18,56 @@
         <![endif]-->
 
         <!-- Add your site or application content here -->
-        <p>Hello world! This is HTML5 Boilerplate.</p>
-
+        <div class="flex-container">
+            <article>
+                <h1 id="title"> Survey Form</h1>
+                <p id="description">Form Structure Below!</p>
+            </article>
+            <form action="index_submit" method="get" accept-charset="utf-8" id="survey-form" class="flex-item">
+               <section>
+                 <fieldset>
+                     <legend> Personal Info</legend>
+                     <p>
+                        <label id="name-label" for="Info">Name</label>
+                        <input id="name"type="text" name="name" placeholder="Enter Name Here" required>
+                     </p>
+                     <p>
+                        <label id="email-label" for="Info">Email</label>
+                        <input id="email" type="email" name="email" placeholder="Enter Email Here" required> 
+                     </p>
+                     <p>
+                       <label id="number-label" for="Info">Number</label>
+                       <input id="number" type="number" name="number" placeholder="Enter Number Here" min="0" max="100">    
+                     </p>
+                 </fieldset>
+               </section>
+               <section>
+                    <h3> DropDown, Radio&amp;Checkboxes, Comments Area</h3>
+                    <p>
+                        <label for="Select">DropDown:</label>
+                        <select id="dropdown" name="Options">
+                           <option value="1">Option 1</option>
+                           <option value="2">Option 2</option>
+                           <option value="3">Option 3</option>
+                        </select>
+                    </p>
+                    <fieldset>
+                        <legend>Radio Buttons</legend>
+                        <input type="radio" name="group1" value="option1"> radio 1
+                        <input type="radio" name="group1" value="option2"> radio 2
+                        <input type="radio" name="group1" value="option2"> radio 3
+                    </fieldset>
+                    <fieldset>
+                        <legend>Check Boxes</legend>
+                        <input type="checkbox" name="group1" value="option1"> check 1
+                        <input type="checkbox" name="group1" value="option2"> check 2
+                        <input type="checkbox" name="group1" value="option2"> check 3
+                    </fieldset>
+                    <textarea name="Comments" cols="20" wrap="hard" placeholder="Enter Comments Here"></textarea>
+               </section>
+               <button id="submit" type="submit">Submit Form!</button>
+            </form>
+        </div>
         <script src="http://code.jquery.com/jquery-1.12.4.min.js"></script>
         <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.12.4.min.js"><\/script>')</script>
 
